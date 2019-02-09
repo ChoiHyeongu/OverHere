@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CurationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/curation_list"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/curation_list2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="12dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:fontFamily="sans-serif-black"
+            android:lineSpacingExtra="6sp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            tools:text="여기는 어때?" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/curation_list3"
+            android:layout_gravity="center"
+            android:layout_width="328dp"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="210dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/ic_local_icon"
+        android:visibility="gone"
+        app:backgroundTint="@android:color/white" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="130dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/ic_add_friends_icon"
+        android:visibility="gone"
+        app:backgroundTint="@android:color/white" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="170dp"
+        android:src="@drawable/ic_add_friends"
+        app:backgroundTint="@android:color/white" />
+</FrameLayout>
