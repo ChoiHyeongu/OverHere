@@ -1,21 +1,28 @@
 package com.example.motivation.overhere
 
-import android.content.Context
-import android.media.Image
 import android.support.v7.widget.RecyclerView
+import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 
-class CurationRecyclerviewAdapter(list: ArrayList<Curation>) : RecyclerView.Adapter<CustomViewHolder>() {
+class CurationRecyclerviewAdapter(list: ArrayList<Curation>, _opt: Int) : RecyclerView.Adapter<CustomViewHolder>() {
 
     var curationList: ArrayList<Curation> = list
+    var opt = _opt
+    lateinit var cellForRow: View
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val cellForRow = layoutInflater.inflate(R.layout.item_cardview, parent, false)
+
+        if (opt == 0) {
+            cellForRow = layoutInflater.inflate(R.layout.item_cardview, parent, false)
+        } else {
+            cellForRow = layoutInflater.inflate(R.layout.item_cardview2,parent, false)
+        }
+
         return CustomViewHolder(cellForRow)
     }
 

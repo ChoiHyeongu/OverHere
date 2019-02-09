@@ -31,9 +31,9 @@ class CurationFragment : Fragment() {
         list.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, true)
         list2.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, true)
         list3.layoutManager = LinearLayoutManager(activity)
-        adapter = CurationRecyclerviewAdapter(initData1())
-        adapter2 = CurationRecyclerviewAdapter(initData2())
-        adapter3 = CurationRecyclerviewAdapter(initData3())
+        adapter = CurationRecyclerviewAdapter(initData1(), 0)
+        adapter2 = CurationRecyclerviewAdapter(initData2(), 0)
+        adapter3 = CurationRecyclerviewAdapter(initData3(), 1)
         list.adapter = adapter
         list2.adapter= adapter2
         list3.adapter= adapter3
