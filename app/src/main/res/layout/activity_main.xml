@@ -42,6 +42,32 @@
 
     </FrameLayout>
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/main_fabLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="130dp"
+        android:layout_marginBottom="76dp"
+        android:src="@drawable/ic_local_icon"
+        android:visibility="gone"
+        app:backgroundTint="@android:color/white"
+        app:borderWidth="0dp"
+        app:fabCustomSize="56dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/main_fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="76dp"
+        android:src="@drawable/ic_add_friends_icon"
+        android:visibility="gone"
+        app:backgroundTint="@android:color/white"
+        app:borderWidth="0dp"
+        app:fabCustomSize="56dp" />
+
     <android.support.design.bottomappbar.BottomAppBar
         android:id="@+id/main_bottombar"
         android:layout_width="match_parent"
@@ -55,13 +81,13 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/main_bottomHome"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/main_bottomHome"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:background="@drawable/ic_home_icon" />
@@ -69,13 +95,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/main_bottomAlert"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/main_bottomAlert"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:background="@drawable/ic_notification_icon" />
@@ -88,13 +114,13 @@
                 android:layout_weight="1" />
 
             <LinearLayout
+                android:id="@+id/main_bottomPlan"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/main_bottomPlan"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:background="@drawable/ic_calendar_icon" />
@@ -102,13 +128,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/main_bottomFriend"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/main_bottomFriend"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:background="@drawable/ic_profile_icon" />
@@ -123,9 +149,10 @@
         android:id="@+id/main_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/white"
         android:src="@drawable/ic_add_friends"
+        app:backgroundTint="@android:color/white"
         app:borderWidth="0dp"
+        app:fabCustomSize="56dp"
         app:fabSize="normal"
         app:layout_anchor="@id/main_bottombar" />
 
