@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -22,13 +23,13 @@
             android:textStyle="normal"
             tools:text="큐레이션" />
 
-        <Button
+        <android.support.v7.widget.SearchView
             android:id="@+id/main_toolbarSearch"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="end"
             android:layout_marginRight="16dp"
-            android:background="@android:drawable/ic_search_category_default"
+            android:background="@drawable/ic_search_black_24dp"
             android:backgroundTint="@android:color/black" />
 
     </android.support.v7.widget.Toolbar>
@@ -81,30 +82,34 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/main_bottomHome"
+                android:id="@+id/main_bottomHomeLayout"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
 
                 <Button
+                    android:id="@+id/main_bottomHome"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:background="@drawable/ic_home_icon" />
+                    android:background="@drawable/ic_home_icon"
+                    android:onClick="bottomMenuClicked" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/main_bottomAlert"
+                android:id="@+id/main_bottomAlerteLayout"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
 
                 <Button
+                    android:id="@+id/main_bottomAlert"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:background="@drawable/ic_notification_icon" />
+                    android:background="@drawable/ic_notification_icon"
+                    android:onClick="bottomMenuClicked" />
 
             </LinearLayout>
 
@@ -114,30 +119,34 @@
                 android:layout_weight="1" />
 
             <LinearLayout
-                android:id="@+id/main_bottomPlan"
+                android:id="@+id/main_bottomPlanLayout"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
 
                 <Button
+                    android:id="@+id/main_bottomPlan"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:background="@drawable/ic_calendar_icon" />
+                    android:background="@drawable/ic_calendar_icon"
+                    android:onClick="bottomMenuClicked" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/main_bottomFriend"
+                android:id="@+id/main_bottomFriendLayout"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center">
 
                 <Button
+                    android:id="@+id/main_bottomFriend"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:background="@drawable/ic_profile_icon" />
+                    android:background="@drawable/ic_profile_icon"
+                    android:onClick="bottomMenuClicked" />
 
             </LinearLayout>
 
@@ -155,6 +164,5 @@
         app:fabCustomSize="56dp"
         app:fabSize="normal"
         app:layout_anchor="@id/main_bottombar" />
-
 
 </android.support.design.widget.CoordinatorLayout>
